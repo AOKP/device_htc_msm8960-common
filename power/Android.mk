@@ -12,9 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-ifeq ($(TARGET_PROVIDES_POWERHAL),true)
-ifeq ($(BOARD_VENDOR),htc)
-ifeq ($(TARGET_BOARD_PLATFORM),msm8960)
 LOCAL_PATH := $(call my-dir)
 
 # HAL module implemenation stored in
@@ -27,7 +24,3 @@ LOCAL_SRC_FILES := power.c
 LOCAL_MODULE := power.$(TARGET_BOARD_PLATFORM)
 LOCAL_MODULE_TAGS := optional
 include $(BUILD_SHARED_LIBRARY)
-
-endif # TARGET_BOARD_PLATFORM
-endif # BOARD_VENDOR
-endif # TARGET_PROVIDES_POWERHAL
